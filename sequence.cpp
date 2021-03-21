@@ -14,7 +14,7 @@ int main(void){
 	int dd;
 	int ann;
 	printf("if having the factor ""a1"" in the formula -> type 1, if not -> type 0\n ");
-	scanf("%d", aa);
+	scanf("%d", &aa);
 	if(aa == 0){
 		printf("Please tell d = :\n");
 		scanf("%d", &d);
@@ -37,8 +37,8 @@ int main(void){
 		printf("Please tell an:\n");
 		scanf("%d", &an);
 		int dans1;
-		dans1 = dans(a1, n, d);
-		printf("d = %d\n", dans);
+		dans1 = dans(a1, n, an);
+		printf("d = %d\n", dans1);
 		return 0;
 	}
 	printf("if having the factor ""n"" in the formula -> type 1, if not -> type 0\n ");
@@ -55,9 +55,9 @@ int main(void){
 		printf("n = %d\n", nans1);
 		return 0;
 	}
-	printf("if having the factor ""an"" in the formula -> type 1, if not -> type 0\n ");
-	scanf("%d", &ann);
-	if(ann = 0){
+//	printf("if having the factor ""an"" in the formula -> type 1, if not -> type 0\n ");
+//	scanf("%d", &ann);
+	if(aa == 1 && dd == 1 && nn == 1){
 		printf("Please tell a1 = \n");
 		scanf("%d", &a1);
 		printf("Please tell d = \n");
@@ -94,17 +94,11 @@ int nans(int a1, int d, int an){
 
 int dans(int a1, int n, int an){
 	int dd;
-	dd = (an -a1) / (n - 1);
+	int x = an - a1;
+	int y = n - 1;
+	dd = x / y;
+	printf("0x%x 0x%x 0x%x\n", an, a1, n);
 	return dd;
 }
-
-
-
-
-
-
-
-
-
 
 
